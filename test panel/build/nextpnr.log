@@ -1,0 +1,262 @@
+Info: constraining clock net 'clk' to 25.00 MHz
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:        21/24288     0%
+Info:         logic LUTs:      1/24288     0%
+Info:         carry LUTs:     20/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:        23/24288     0%
+
+Info: Packing IOs..
+Info: pin 'r0$tr_io' constrained to Bel 'X72/Y14/PIOC'.
+Info: pin 'oe$tr_io' constrained to Bel 'X0/Y35/PIOC'.
+Info: pin 'latch$tr_io' constrained to Bel 'X0/Y32/PIOA'.
+Info: pin 'clk_out$tr_io' constrained to Bel 'X0/Y32/PIOD'.
+Info: pin 'clk$tr_io' constrained to Bel 'X0/Y47/PIOC'.
+Info: pin 'addr[4]$tr_io' constrained to Bel 'X0/Y38/PIOA'.
+Info: pin 'addr[3]$tr_io' constrained to Bel 'X0/Y41/PIOA'.
+Info: pin 'addr[2]$tr_io' constrained to Bel 'X0/Y38/PIOB'.
+Info: pin 'addr[1]$tr_io' constrained to Bel 'X0/Y35/PIOD'.
+Info: pin 'addr[0]$tr_io' constrained to Bel 'X0/Y44/PIOD'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     21 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0x3820b0e7
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0xca049a0f
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:    10/  197     5%
+Info: 	                DCCA:     1/   56     1%
+Info: 	              DP16KD:     0/   56     0%
+Info: 	          MULT18X18D:     0/   28     0%
+Info: 	              ALU54B:     0/   14     0%
+Info: 	             EHXPLLL:     0/    2     0%
+Info: 	             EXTREFB:     0/    1     0%
+Info: 	                DCUA:     0/    1     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  128     0%
+Info: 	            SIOLOGIC:     0/   69     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/    8     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+Info: 	          TRELLIS_FF:    23/24288     0%
+Info: 	        TRELLIS_COMB:    27/24288     0%
+Info: 	        TRELLIS_RAMW:     0/ 3036     0%
+
+Info: Placed 10 cells based on constraints.
+Info: Creating initial analytic placement for 5 cells, random placement wirelen = 355.
+Info:     at initial placer iter 0, wirelen = 150
+Info:     at initial placer iter 1, wirelen = 136
+Info:     at initial placer iter 2, wirelen = 134
+Info:     at initial placer iter 3, wirelen = 138
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type ALL: wirelen solved = 138, spread = 138, legal = 162; time = 0.00s
+Info: HeAP Placer Time: 0.02s
+Info:   of which solving equations: 0.00s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 4, wirelen = 162
+Info:   at iteration #5: temp = 0.000000, timing cost = 0, wirelen = 144
+Info:   at iteration #6: temp = 0.000000, timing cost = 0, wirelen = 144 
+Info: SA placement time 0.00s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 562.75 MHz (PASS at 25.00 MHz)
+
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 9.77 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 38223,  40392) |*********************** 
+Info: [ 40392,  42561) | 
+Info: [ 42561,  44730) | 
+Info: [ 44730,  46899) | 
+Info: [ 46899,  49068) | 
+Info: [ 49068,  51237) | 
+Info: [ 51237,  53406) | 
+Info: [ 53406,  55575) | 
+Info: [ 55575,  57744) | 
+Info: [ 57744,  59913) | 
+Info: [ 59913,  62082) | 
+Info: [ 62082,  64251) | 
+Info: [ 64251,  66420) | 
+Info: [ 66420,  68589) | 
+Info: [ 68589,  70758) | 
+Info: [ 70758,  72927) | 
+Info: [ 72927,  75096) |* 
+Info: [ 75096,  77265) | 
+Info: [ 77265,  79434) | 
+Info: [ 79434,  81603) |** 
+Info: Checksum: 0xf56edba6
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 80 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:         81 |        1         68 |    1    68 |         0|       0.01       0.01|
+Info: Routing complete.
+Info: Router1 time 0.01s
+Info: Checksum: 0x3b1b2465
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source counter_TRELLIS_FF_Q_19.Q
+Info:  0.7  1.2    Net counter[0] budget 19.112000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_9$CCU2_COMB0.B
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.4  1.6  Source counter_CCU2C_B0_9$CCU2_COMB0.FCO
+Info:  0.0  1.6    Net counter_CCU2C_B0_9$CCU2_FCI_INT budget 0.000000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_9$CCU2_COMB1.FCI
+Info:  0.0  1.6  Source counter_CCU2C_B0_9$CCU2_COMB1.FCO
+Info:  0.0  1.6    Net counter_CCU2C_B0_COUT[2] budget 0.000000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_3$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  1.6  Source counter_CCU2C_B0_3$CCU2_COMB0.FCO
+Info:  0.0  1.6    Net counter_CCU2C_B0_3$CCU2_FCI_INT budget 0.000000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_3$CCU2_COMB1.FCI
+Info:  0.0  1.6  Source counter_CCU2C_B0_3$CCU2_COMB1.FCO
+Info:  0.0  1.6    Net counter_CCU2C_B0_COUT[4] budget 0.000000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_2$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  1.7  Source counter_CCU2C_B0_2$CCU2_COMB0.FCO
+Info:  0.0  1.7    Net counter_CCU2C_B0_2$CCU2_FCI_INT budget 0.000000 ns (4,31) -> (4,31)
+Info:                Sink counter_CCU2C_B0_2$CCU2_COMB1.FCI
+Info:  0.0  1.7  Source counter_CCU2C_B0_2$CCU2_COMB1.FCO
+Info:  0.0  1.7    Net counter_CCU2C_B0_COUT[6] budget 0.000000 ns (4,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_1$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  1.8  Source counter_CCU2C_B0_1$CCU2_COMB0.FCO
+Info:  0.0  1.8    Net counter_CCU2C_B0_1$CCU2_FCI_INT budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_1$CCU2_COMB1.FCI
+Info:  0.0  1.8  Source counter_CCU2C_B0_1$CCU2_COMB1.FCO
+Info:  0.0  1.8    Net counter_CCU2C_B0_COUT[8] budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  1.8  Source counter_CCU2C_B0$CCU2_COMB0.FCO
+Info:  0.0  1.8    Net counter_CCU2C_B0$CCU2_FCI_INT budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0$CCU2_COMB1.FCI
+Info:  0.0  1.8  Source counter_CCU2C_B0$CCU2_COMB1.FCO
+Info:  0.0  1.8    Net counter_CCU2C_B0_COUT[10] budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_8$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  1.9  Source counter_CCU2C_B0_8$CCU2_COMB0.FCO
+Info:  0.0  1.9    Net counter_CCU2C_B0_8$CCU2_FCI_INT budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_8$CCU2_COMB1.FCI
+Info:  0.0  1.9  Source counter_CCU2C_B0_8$CCU2_COMB1.FCO
+Info:  0.0  1.9    Net counter_CCU2C_B0_COUT[12] budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_7$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  2.0  Source counter_CCU2C_B0_7$CCU2_COMB0.FCO
+Info:  0.0  2.0    Net counter_CCU2C_B0_7$CCU2_FCI_INT budget 0.000000 ns (5,31) -> (5,31)
+Info:                Sink counter_CCU2C_B0_7$CCU2_COMB1.FCI
+Info:  0.0  2.0  Source counter_CCU2C_B0_7$CCU2_COMB1.FCO
+Info:  0.0  2.0    Net counter_CCU2C_B0_COUT[14] budget 0.000000 ns (5,31) -> (6,31)
+Info:                Sink counter_CCU2C_B0_6$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  2.0  Source counter_CCU2C_B0_6$CCU2_COMB0.FCO
+Info:  0.0  2.0    Net counter_CCU2C_B0_6$CCU2_FCI_INT budget 0.000000 ns (6,31) -> (6,31)
+Info:                Sink counter_CCU2C_B0_6$CCU2_COMB1.FCI
+Info:  0.0  2.0  Source counter_CCU2C_B0_6$CCU2_COMB1.FCO
+Info:  0.0  2.0    Net counter_CCU2C_B0_COUT[16] budget 0.000000 ns (6,31) -> (6,31)
+Info:                Sink counter_CCU2C_B0_5$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.1  2.1  Source counter_CCU2C_B0_5$CCU2_COMB0.FCO
+Info:  0.0  2.1    Net counter_CCU2C_B0_5$CCU2_FCI_INT budget 0.000000 ns (6,31) -> (6,31)
+Info:                Sink counter_CCU2C_B0_5$CCU2_COMB1.FCI
+Info:  0.0  2.1  Source counter_CCU2C_B0_5$CCU2_COMB1.FCO
+Info:  0.0  2.1    Net counter_CCU2C_B0_COUT[18] budget 0.000000 ns (6,31) -> (6,31)
+Info:                Sink counter_CCU2C_B0_4$CCU2_COMB0.FCI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:63.22-63.23
+Info:  0.4  2.5  Source counter_CCU2C_B0_4$CCU2_COMB0.F
+Info:  0.1  2.6    Net counter_TRELLIS_FF_Q_DI[18] budget 19.125000 ns (6,31) -> (6,31)
+Info:                Sink counter_TRELLIS_FF_Q_1.DI
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:19.20-19.31
+Info:                  /usr/bin/../share/yosys/ecp5/arith_map.v:34.26-34.27
+Info:  0.0  2.6  Setup counter_TRELLIS_FF_Q_1.DI
+Info: 1.8 ns logic, 0.8 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source r0_TRELLIS_FF_Q.Q
+Info:  4.3  4.7    Net r0$TRELLIS_IO_OUT budget 82.873001 ns (6,30) -> (72,14)
+Info:                Sink r0$tr_io.I
+Info:                Defined in:
+Info:                  icn2038s_minimal.v:8.16-8.18
+Info: 0.5 ns logic, 4.3 ns routing
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 385.51 MHz (PASS at 25.00 MHz)
+
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>: 4.73 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 37406,  39636) |*********************** 
+Info: [ 39636,  41866) | 
+Info: [ 41866,  44096) | 
+Info: [ 44096,  46326) | 
+Info: [ 46326,  48556) | 
+Info: [ 48556,  50786) | 
+Info: [ 50786,  53016) | 
+Info: [ 53016,  55246) | 
+Info: [ 55246,  57476) | 
+Info: [ 57476,  59706) | 
+Info: [ 59706,  61936) | 
+Info: [ 61936,  64166) | 
+Info: [ 64166,  66396) | 
+Info: [ 66396,  68626) | 
+Info: [ 68626,  70856) | 
+Info: [ 70856,  73086) | 
+Info: [ 73086,  75316) | 
+Info: [ 75316,  77546) | 
+Info: [ 77546,  79776) |* 
+Info: [ 79776,  82006) |** 
+
+Info: Program finished normally.

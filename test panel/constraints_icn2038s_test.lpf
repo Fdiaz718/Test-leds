@@ -1,0 +1,76 @@
+# constraints_icn2038s_test.lpf
+# Pinout COMPLETO para ICN2038S - TODOS los pines RGB
+# 5A-75E v8.2 - Conector J16
+# ============================================
+
+# ============================================
+# RELOJ DEL SISTEMA (25 MHz)
+# ============================================
+LOCATE COMP "clk" SITE "P6";
+IOBUF PORT "clk" IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk" 25 MHZ;
+
+# ============================================
+# PINES RGB - TODOS los canales de datos
+# ============================================
+
+# RGB0 (fila superior) - J16 Pins 1, 2, 3
+LOCATE COMP "r0" SITE "G14";   # Pin 1 - RED 0
+LOCATE COMP "g0" SITE "G13";   # Pin 2 - GREEN 0
+LOCATE COMP "b0" SITE "F12";   # Pin 3 - BLUE 0
+
+# RGB1 (fila inferior) - J16 Pins 5, 6, 7
+LOCATE COMP "r1" SITE "F13";   # Pin 5 - RED 1
+LOCATE COMP "g1" SITE "F14";   # Pin 6 - GREEN 1
+LOCATE COMP "b1" SITE "E14";   # Pin 7 - BLUE 1
+
+# Configuración I/O para todos los pines RGB
+IOBUF PORT "r0" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "g0" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "b0" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "r1" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "g1" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "b1" IO_TYPE=LVCMOS33 DRIVE=8;
+
+# ============================================
+# PINES DE CONTROL (compartidos)
+# ============================================
+
+# CLK - Reloj serial compartido por todos los ICN2038S
+LOCATE COMP "clk_out" SITE "M3";   # Pin 13
+IOBUF PORT "clk_out" IO_TYPE=LVCMOS33 DRIVE=8;
+
+# LE - Latch Enable compartido
+LOCATE COMP "latch" SITE "N1";     # Pin 14
+IOBUF PORT "latch" IO_TYPE=LVCMOS33 DRIVE=8;
+
+# OE - Output Enable compartido (activo bajo)
+LOCATE COMP "oe" SITE "M4";        # Pin 15
+IOBUF PORT "oe" IO_TYPE=LVCMOS33 DRIVE=8;
+
+# ============================================
+# ADDR - Selección de fila (A, B, C, D, E)
+# ============================================
+# Pines compartidos en todos los conectores
+
+LOCATE COMP "addr[0]" SITE "N5";   # A
+LOCATE COMP "addr[1]" SITE "N3";   # B
+LOCATE COMP "addr[2]" SITE "P3";   # C
+LOCATE COMP "addr[3]" SITE "P4";   # D
+LOCATE COMP "addr[4]" SITE "N4";   # E
+
+IOBUF PORT "addr[0]" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "addr[1]" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "addr[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "addr[3]" IO_TYPE=LVCMOS33 DRIVE=8;
+IOBUF PORT "addr[4]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+# ============================================
+# NOTAS IMPORTANTES
+# ============================================
+# Arquitectura esperada:
+# - R0, G0, B0 controlan 3 cadenas separadas de ICN2038S (fila superior)
+# - R1, G1, B1 controlan 3 cadenas separadas de ICN2038S (fila inferior)
+# - Total: 6 cadenas × 4 chips = 24 chips ICN2038S
+# - Cada cadena maneja 64 LEDs (4 chips × 16 canales)
+# - ADDR[4:0] selecciona cuál de las 32 filas mostrar (scan 1/32)
