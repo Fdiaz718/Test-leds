@@ -2,10 +2,10 @@
 
 # Configuración del proyecto
 PROJECT = icn2038s_test
-TOP_MODULE = icn2038s_minimal
+TOP_MODULE = test_leds
 
 # Archivos fuente
-SOURCES = icn2038s_minimal.v
+SOURCES = test_leds.v
 
 # Directorio de construcción
 BUILD_DIR = build
